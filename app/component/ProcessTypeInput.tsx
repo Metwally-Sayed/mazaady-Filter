@@ -1,4 +1,4 @@
-import { Categories } from "../typs";
+import { Categories, Children, SupCategory } from "../typs";
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { BiChevronDown } from "react-icons/bi";
@@ -15,7 +15,7 @@ export default function SubInput({
   supCategoryData,
 }: {
   processTypeHandler: Function;
-  supCategoryData: { id: number; name: string }[];
+  supCategoryData?: SupCategory[];
 }) {
   const [selected, setSelected] = useState({ id: number, name: "" });
   const [other, setOther] = useState(false);

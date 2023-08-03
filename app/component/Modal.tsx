@@ -4,7 +4,7 @@ import { Fragment, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import SelectInputFeild from "./SelectInputFeild";
 import axios from "../axios";
-import { Categories, Children } from "../typs";
+import { Categories, Children, SupCategory } from "../typs";
 import SubInput from "./SubInput";
 import ProcessTypeInput from "./ProcessTypeInput";
 
@@ -21,7 +21,7 @@ export default function Modal({
     children: [],
     description: "",
   });
-  const [supCategoryData, setSubCategoryData] = useState<Children>();
+  const [supCategoryData, setSubCategoryData] = useState<SupCategory[]>();
   const [processTypeData, setProcessTypeData] = useState<Children>();
 
   const SelectionHandler = (selectionData: Categories) => {
@@ -29,9 +29,9 @@ export default function Modal({
     console.log(selectionData);
   };
 
-  const supCategoryHandler = (selectionData: Children) => {
+  const supCategoryHandler = (selectionData: SupCategory[]) => {
     setSubCategoryData(selectionData);
-    console.log(selectionData);
+    console.log(selectionData, "supCategoryData");
   };
 
   const processTypeHandler = (selectionData: Children) => {

@@ -17,3 +17,11 @@ export interface InputData {
   description: string;
   children: Children[];
 }
+
+export interface SupCategory {
+  description: string;
+  list: boolean;
+  name: string;
+  options: {}[];
+  id: number;
+}
