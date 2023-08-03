@@ -26,17 +26,14 @@ export default function Modal({
 
   const SelectionHandler = (selectionData: Categories) => {
     setSelectionData(selectionData);
-    console.log(selectionData);
   };
 
   const supCategoryHandler = (selectionData: SupCategory[]) => {
     setSubCategoryData(selectionData);
-    console.log(selectionData, "supCategoryData");
   };
 
   const processTypeHandler = (selectionData: Children) => {
     setProcessTypeData(selectionData);
-    console.log(selectionData);
   };
 
   useEffect(() => {

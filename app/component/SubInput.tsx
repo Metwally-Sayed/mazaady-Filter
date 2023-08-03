@@ -15,10 +15,8 @@ export default function SubInput({
   selectionData: Categories;
   supCategoryHandler: Function;
 }) {
-  console.log(selectionData);
 
   const [selected, setSelected] = useState(selectionData.children[0]);
-  console.log(selected);
 
   const getCategoryData = async () => {
     try {

@@ -20,15 +20,13 @@ export default function SubInput({
   const [selected, setSelected] = useState({ id: number, name: "" });
   const [other, setOther] = useState(false);
 
-  console.log(selected);
-  console.log(supCategoryData);
+
 
   processTypeHandler(selected);
 
   const getCategoryData = async () => {
     try {
       const response = await axios.get(`/get-options-child/${selected?.id}`);
-      console.log(response.data.data, "cccccccccccc");
       return response;
     } catch (error) {
       console.log(error);
