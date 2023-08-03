@@ -2,7 +2,6 @@
 
 import { Fragment, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { CheckIcon } from "@heroicons/react/24/outline";
 import SelectInputFeild from "./SelectInputFeild";
 import axios from "../axios";
 import { Categories, Children } from "../typs";
